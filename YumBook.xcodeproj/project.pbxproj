@@ -35,7 +35,24 @@
 		19DF312429BA4BFA00301B98 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF312229BA4BFA00301B98 /* ListRowView.swift */; };
 		19DF312829BA4C1100301B98 /* ListRowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF312629BA4C1100301B98 /* ListRowImageView.swift */; };
 		19DF312929BA4C1100301B98 /* DetailedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF312729BA4C1100301B98 /* DetailedImageView.swift */; };
+		19DF314129BA53F200301B98 /* NetworkUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF312D29BA534E00301B98 /* NetworkUnitTests.swift */; };
+		19DF314329BA540200301B98 /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 19DF314229BA540200301B98 /* Categories.json */; };
+		19DF314529BA540B00301B98 /* FavoriteUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF314429BA540B00301B98 /* FavoriteUnitTest.swift */; };
+		19DF314929BA54DD00301B98 /* JSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF314829BA54DD00301B98 /* JSONMapper.swift */; };
+		19DF314B29BA54F300301B98 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF314A29BA54F300301B98 /* MockAPIService.swift */; };
+		19DF314D29BA551600301B98 /* MockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF314C29BA551600301B98 /* MockProtocol.swift */; };
+		19DF314E29BA553600301B98 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF314A29BA54F300301B98 /* MockAPIService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19DF313C29BA53E700301B98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19DF30CD29BA46FE00301B98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19DF30D429BA46FE00301B98;
+			remoteInfo = YumBook;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		19DF30D529BA46FE00301B98 /* YumBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YumBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,10 +85,24 @@
 		19DF312229BA4BFA00301B98 /* ListRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		19DF312629BA4C1100301B98 /* ListRowImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRowImageView.swift; sourceTree = "<group>"; };
 		19DF312729BA4C1100301B98 /* DetailedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedImageView.swift; sourceTree = "<group>"; };
+		19DF312D29BA534E00301B98 /* NetworkUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUnitTests.swift; sourceTree = "<group>"; };
+		19DF313829BA53E700301B98 /* YumBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YumBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19DF314229BA540200301B98 /* Categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
+		19DF314429BA540B00301B98 /* FavoriteUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteUnitTest.swift; sourceTree = "<group>"; };
+		19DF314829BA54DD00301B98 /* JSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapper.swift; sourceTree = "<group>"; };
+		19DF314A29BA54F300301B98 /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
+		19DF314C29BA551600301B98 /* MockProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		19DF30D229BA46FE00301B98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19DF313529BA53E700301B98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				19DF30D729BA46FE00301B98 /* YumBook */,
+				19DF313929BA53E700301B98 /* YumBookTests */,
 				19DF30D629BA46FE00301B98 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				19DF30D529BA46FE00301B98 /* YumBook.app */,
+				19DF313829BA53E700301B98 /* YumBookTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,6 +246,27 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		19DF313929BA53E700301B98 /* YumBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				19DF312D29BA534E00301B98 /* NetworkUnitTests.swift */,
+				19DF314229BA540200301B98 /* Categories.json */,
+				19DF314429BA540B00301B98 /* FavoriteUnitTest.swift */,
+				19DF314729BA549F00301B98 /* MockServer */,
+			);
+			path = YumBookTests;
+			sourceTree = "<group>";
+		};
+		19DF314729BA549F00301B98 /* MockServer */ = {
+			isa = PBXGroup;
+			children = (
+				19DF314829BA54DD00301B98 /* JSONMapper.swift */,
+				19DF314A29BA54F300301B98 /* MockAPIService.swift */,
+				19DF314C29BA551600301B98 /* MockProtocol.swift */,
+			);
+			path = MockServer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +287,24 @@
 			productReference = 19DF30D529BA46FE00301B98 /* YumBook.app */;
 			productType = "com.apple.product-type.application";
 		};
+		19DF313729BA53E700301B98 /* YumBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19DF313E29BA53E700301B98 /* Build configuration list for PBXNativeTarget "YumBookTests" */;
+			buildPhases = (
+				19DF313429BA53E700301B98 /* Sources */,
+				19DF313529BA53E700301B98 /* Frameworks */,
+				19DF313629BA53E700301B98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19DF313D29BA53E700301B98 /* PBXTargetDependency */,
+			);
+			name = YumBookTests;
+			productName = YumBookTests;
+			productReference = 19DF313829BA53E700301B98 /* YumBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -245,6 +317,10 @@
 				TargetAttributes = {
 					19DF30D429BA46FE00301B98 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					19DF313729BA53E700301B98 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 19DF30D429BA46FE00301B98;
 					};
 				};
 			};
@@ -262,6 +338,7 @@
 			projectRoot = "";
 			targets = (
 				19DF30D429BA46FE00301B98 /* YumBook */,
+				19DF313729BA53E700301B98 /* YumBookTests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,6 +351,14 @@
 				19DF30E029BA470000301B98 /* Preview Assets.xcassets in Resources */,
 				19DF30DD29BA470000301B98 /* Assets.xcassets in Resources */,
 				19DF30E929BA483F00301B98 /* ComicNeue-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19DF313629BA53E700301B98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19DF314329BA540200301B98 /* Categories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +381,7 @@
 				19DF311B29BA4BE000301B98 /* TabViews.swift in Sources */,
 				19DF310E29BA4BA900301B98 /* MealsViewModel.swift in Sources */,
 				19DF30F129BA4A1200301B98 /* CategoryModel.swift in Sources */,
+				19DF314E29BA553600301B98 /* MockAPIService.swift in Sources */,
 				19DF311D29BA4BE000301B98 /* IngredientsView.swift in Sources */,
 				19DF310429BA4AE900301B98 /* APIServiceProtocol.swift in Sources */,
 				19DF312929BA4C1100301B98 /* DetailedImageView.swift in Sources */,
@@ -312,7 +398,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19DF313429BA53E700301B98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19DF314B29BA54F300301B98 /* MockAPIService.swift in Sources */,
+				19DF314129BA53F200301B98 /* NetworkUnitTests.swift in Sources */,
+				19DF314929BA54DD00301B98 /* JSONMapper.swift in Sources */,
+				19DF314529BA540B00301B98 /* FavoriteUnitTest.swift in Sources */,
+				19DF314D29BA551600301B98 /* MockProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19DF313D29BA53E700301B98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19DF30D429BA46FE00301B98 /* YumBook */;
+			targetProxy = 19DF313C29BA53E700301B98 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		19DF30E129BA470000301B98 /* Debug */ = {
@@ -489,6 +595,42 @@
 			};
 			name = Release;
 		};
+		19DF313F29BA53E700301B98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQ68G99VDN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jameelFetch.YumBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YumBook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YumBook";
+			};
+			name = Debug;
+		};
+		19DF314029BA53E700301B98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQ68G99VDN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jameelFetch.YumBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YumBook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/YumBook";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -506,6 +648,15 @@
 			buildConfigurations = (
 				19DF30E429BA470000301B98 /* Debug */,
 				19DF30E529BA470000301B98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19DF313E29BA53E700301B98 /* Build configuration list for PBXNativeTarget "YumBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19DF313F29BA53E700301B98 /* Debug */,
+				19DF314029BA53E700301B98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
