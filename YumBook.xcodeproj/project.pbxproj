@@ -20,6 +20,10 @@
 		19DF310229BA4AD100301B98 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF310129BA4AD100301B98 /* APIService.swift */; };
 		19DF310429BA4AE900301B98 /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF310329BA4AE900301B98 /* APIServiceProtocol.swift */; };
 		19DF310629BA4AFE00301B98 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF310529BA4AFD00301B98 /* NetworkManager.swift */; };
+		19DF310D29BA4BA900301B98 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF310929BA4BA900301B98 /* FavoriteViewModel.swift */; };
+		19DF310E29BA4BA900301B98 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF310A29BA4BA900301B98 /* MealsViewModel.swift */; };
+		19DF310F29BA4BA900301B98 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF310B29BA4BA900301B98 /* MenuViewModel.swift */; };
+		19DF311029BA4BA900301B98 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF310C29BA4BA900301B98 /* CategoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,11 @@
 		19DF310129BA4AD100301B98 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		19DF310329BA4AE900301B98 /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
 		19DF310529BA4AFD00301B98 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		19DF310729BA4B3D00301B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		19DF310929BA4BA900301B98 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		19DF310A29BA4BA900301B98 /* MealsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
+		19DF310B29BA4BA900301B98 /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		19DF310C29BA4BA900301B98 /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +78,10 @@
 		19DF30D729BA46FE00301B98 /* YumBook */ = {
 			isa = PBXGroup;
 			children = (
-				19DF30EA29BA498700301B98 /* Models */,
 				19DF30E629BA47F300301B98 /* App */,
+				19DF310729BA4B3D00301B98 /* Info.plist */,
+				19DF30EA29BA498700301B98 /* Models */,
+				19DF310829BA4B8500301B98 /* ViewModels */,
 				19DF30DE29BA470000301B98 /* Preview Content */,
 			);
 			path = YumBook;
@@ -132,6 +143,17 @@
 				19DF310529BA4AFD00301B98 /* NetworkManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		19DF310829BA4B8500301B98 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				19DF310C29BA4BA900301B98 /* CategoryViewModel.swift */,
+				19DF310929BA4BA900301B98 /* FavoriteViewModel.swift */,
+				19DF310A29BA4BA900301B98 /* MealsViewModel.swift */,
+				19DF310B29BA4BA900301B98 /* MenuViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,16 +227,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19DF311029BA4BA900301B98 /* CategoryViewModel.swift in Sources */,
 				19DF30F329BA4A2100301B98 /* MealModel.swift in Sources */,
 				19DF30D929BA46FE00301B98 /* YumBookApp.swift in Sources */,
 				19DF310229BA4AD100301B98 /* APIService.swift in Sources */,
 				19DF310629BA4AFE00301B98 /* NetworkManager.swift in Sources */,
 				19DF30F529BA4A2900301B98 /* MenuModel.swift in Sources */,
+				19DF310E29BA4BA900301B98 /* MealsViewModel.swift in Sources */,
 				19DF30F129BA4A1200301B98 /* CategoryModel.swift in Sources */,
 				19DF310429BA4AE900301B98 /* APIServiceProtocol.swift in Sources */,
 				19DF30EC29BA49A700301B98 /* CacheAsyncImage.swift in Sources */,
 				19DF30EE29BA49E400301B98 /* Constants.swift in Sources */,
+				19DF310F29BA4BA900301B98 /* MenuViewModel.swift in Sources */,
 				19DF310029BA4AA300301B98 /* APIError.swift in Sources */,
+				19DF310D29BA4BA900301B98 /* FavoriteViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +372,7 @@
 				DEVELOPMENT_TEAM = QQ68G99VDN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YumBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -375,6 +402,7 @@
 				DEVELOPMENT_TEAM = QQ68G99VDN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = YumBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
