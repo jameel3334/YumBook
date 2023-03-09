@@ -206,8 +206,8 @@
 			children = (
 				19DF310C29BA4BA900301B98 /* CategoryViewModel.swift */,
 				19DF310929BA4BA900301B98 /* FavoriteViewModel.swift */,
-				19DF310A29BA4BA900301B98 /* MealsViewModel.swift */,
 				19DF310B29BA4BA900301B98 /* MenuViewModel.swift */,
+				19DF310A29BA4BA900301B98 /* MealsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

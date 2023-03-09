@@ -16,7 +16,6 @@ struct DetailedMealView: View {
     @State private var ingredientsIsShowing: Bool = false
     let id: String
     var body: some View {
-        
         ZStack {
             Color(Constants.Color.accentColor).opacity(Constants.General.opacityBackground)
                 .ignoresSafeArea()
@@ -30,7 +29,7 @@ struct DetailedMealView: View {
                                 .cornerRadius(Constants.Image.menuTileCornerRadius)
                             Divider()
                             HStack {
-                                HeaderText(text: meal.title)
+                                SubHeaderText(text: meal.title)
                                     .multilineTextAlignment(.trailing)
                                     .fixedSize(horizontal: false, vertical: true)
                                     .padding()
@@ -43,13 +42,18 @@ struct DetailedMealView: View {
                                 .multilineTextAlignment(.center)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .padding()
-                            
-                            Button("Show Popup") {
-                                ingredientsIsShowing = true
-                            }
+                                .toolbar {
+                                    ToolbarItem(placement: .navigationBarTrailing) {
+                                        Button(action: {
+                                            ingredientsIsShowing = true
+                                        }) {
+                                            Image(systemName: "info.circle")
+                                        }
+                                    }
+                                }
                         }
                         .sheet(isPresented: $ingredientsIsShowing) {
-                            IngredientsView(id: meal.id)
+                            IngredientsView(ingredientsAndMeasures: meal.ingredientsAndMeasures)
                         }
                     }
                 }
@@ -62,15 +66,15 @@ struct DetailedMealView: View {
                 }
             } else if (verticalSizeClass == .compact && (horizontalSizeClass == . regular || horizontalSizeClass == .compact)) {
                 ScrollView {
-                    HStack {
-                        ForEach(viewModel.meals, id: \.id) { meal in
+                    ForEach(viewModel.meals, id: \.id) { meal in
+                        HStack {
                             VStack {
                                 DetailedImageView(imageURL: meal.image)
                                     .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
                                     .cornerRadius(Constants.Image.menuTileCornerRadius)
                                 Divider()
                                 HStack {
-                                    HeaderText(text: meal.title)
+                                    SubHeaderText(text: meal.title)
                                         .multilineTextAlignment(.trailing)
                                         .fixedSize(horizontal: false, vertical: true)
                                         .padding()
@@ -86,14 +90,26 @@ struct DetailedMealView: View {
                                     .fixedSize(horizontal: false, vertical: true)
                                     .padding()
                             }
-                            .task {
-                                do {
-                                    try await viewModel.fetchMeals(for: id)
-                                } catch {
-                                    print("Error is here \(error)")
+                            .toolbar {
+                                ToolbarItem(placement: .navigationBarTrailing) {
+                                    Button(action: {
+                                        ingredientsIsShowing = true
+                                    }) {
+                                        Image(systemName: "info.circle")
+                                    }
                                 }
                             }
                         }
+                        .sheet(isPresented: $ingredientsIsShowing) {
+                            IngredientsView(ingredientsAndMeasures: meal.ingredientsAndMeasures)
+                        }
+                    }
+                }
+                .task {
+                    do {
+                        try await viewModel.fetchMeals(for: id)
+                    } catch {
+                        print("Error is here \(error)")
                     }
                 }
             }

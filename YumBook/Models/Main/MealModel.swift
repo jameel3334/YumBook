@@ -111,3 +111,19 @@ struct Meal: Codable, Equatable, Identifiable {
     }
 }
 
+extension Meal {
+    var ingredientsAndMeasures: [String] {
+        let mirror = Mirror(reflecting: self)
+        var ingredientsAndMeasures = [String]()
+        for child in mirror.children {
+            if let ingredient = child.value as? String, let label = child.label, label.starts(with: "ingredient"), !ingredient.isEmpty {
+                let measureLabel = "measure" + label.dropFirst("ingredient".count)
+                if let measure = mirror.children.first(where: { $0.label == measureLabel })?.value as? String, !measure.isEmpty {
+                    ingredientsAndMeasures.append("\(ingredient) - \(measure)")
+                }
+            }
+        }
+        return ingredientsAndMeasures
+    }
+}
+

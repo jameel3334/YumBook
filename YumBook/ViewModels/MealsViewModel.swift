@@ -19,9 +19,9 @@ class MealsViewModel: ObservableObject {
     
     func fetchMeals(for id: String) async throws {
         do {
-            let data = try await service.fetchData(from: "\(Constants.URL.callMeal)\(id)" , for: TotalMeal.self)
+            let data = try await service.fetchData(from: "\(Constants.URL.callMeal)\(id)", for: TotalMeal.self)
             Task { @MainActor in
-                meals = data.meals
+                    meals = data.meals
             }
         } catch {
             throw NetworkingError.invalidData
