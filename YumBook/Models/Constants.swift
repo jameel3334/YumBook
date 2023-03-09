@@ -20,17 +20,17 @@ enum Constants {
         public static let opacityBackground: CGFloat = 0.3
     }
     enum Color {
-        public static let textColor = "TextViewColor"
+        public static let textColor = "textViewColor"
         public static let accentColor = "AccentColor"
     }
     enum Image {
-        public static let mobileAppImage = "MobileStart"
-        public static let leftSpoonAppImage = "LeftSpoonStart"
+        public static let mobileAppImage = "mainStart"
+        public static let leftSpoonAppImage = "leftSpoonStart"
         public static let menuTileHeightWidth: CGFloat = 80.0
         public static let menuTileCornerRadius: CGFloat = 12.0
         public static let portraitViewImageDimensions: CGFloat = 350.0
         public static let landscapeViewImageDimensions: CGFloat = 200.0
-        public static let defaultMenuImage = "DefaultMenuImage"
+        public static let defaultMenuImage = "defaultMenuImage"
     }
     enum URL {
         public static let callMenus = "https://www.themealdb.com/api/json/v1/1/filter.php?c="
@@ -39,6 +39,8 @@ enum Constants {
     }
     enum String {
         public static let menuTitleName = "Menu"
+        public static let categoriesTitleName = "Categories"
+        public static let favoritesTitleName = "Favorites"
     }
     enum Font {
         public static let comicText = "ComicNeue-Regular"

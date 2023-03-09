@@ -23,7 +23,7 @@ struct FavoriteView: View {
                 }
                 .onDelete(perform: viewModel.remove)
             }
-            .navigationBarTitle("Favorites".uppercased())
+            .navigationBarTitle(Constants.String.favoritesTitleName)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 EditButton()

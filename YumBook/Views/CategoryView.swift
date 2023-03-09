@@ -21,7 +21,7 @@ struct CategoryView: View {
                     }
                 )
             }
-            .navigationBarTitle("Categories".uppercased())
+            .navigationBarTitle(Constants.String.categoriesTitleName)
             .navigationBarTitleDisplayMode(.large)
             .onAppear {
                 viewModel.fetchDessertMeals()
