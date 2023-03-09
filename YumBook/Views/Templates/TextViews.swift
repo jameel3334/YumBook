@@ -51,7 +51,6 @@ struct SubHeaderText: View {
             .foregroundColor(Color(Constants.Color.textColor))
             .font(.headline)
             .lineLimit(nil)
-            .multilineTextAlignment(.leading)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

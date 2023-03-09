@@ -36,6 +36,8 @@ struct DetailedMealView: View {
                             Spacer()
                             Divider()
                             SubHeaderText(text: Constants.String.instTitleName)
+                                .multilineTextAlignment(.center)
+                                .padding()
                             LabelText(text: meal.instructions.replacingOccurrences(of: "Pork", with: "Steak"))
                                 .multilineTextAlignment(.center)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -51,25 +53,19 @@ struct DetailedMealView: View {
                         }
                     }
                 }
-                .task {
-                    do {
-                        try await viewModel.fetchMeals(for: id)
-                    } catch {
-                        print("Error is here \(error)")
-                    }
-                }
+                
             } else if (verticalSizeClass == .compact && (horizontalSizeClass == . regular || horizontalSizeClass == .compact)) {
                 ForEach(viewModel.meals, id: \.id) { meal in
                     HStack {
                         ScrollView {
                             VStack {
                                 DetailedImageView(imageURL: meal.image)
+                                    .scaledToFit()
                                     .frame(width: Constants.Image.landscapeViewImageDimensions, height: Constants.Image.landscapeViewImageDimensions)
                                     .cornerRadius(Constants.Image.menuTileCornerRadius)
-                                    .scaledToFit()
                                 Divider()
                                 SubHeaderText(text: meal.title.replacingOccurrences(of: "Pork", with: "Steak"))
-                                    .multilineTextAlignment(.trailing)
+                                    .multilineTextAlignment(.leading)
                                     .fixedSize(horizontal: false, vertical: true)
                                     .padding()
                                 Spacer()
@@ -81,6 +77,8 @@ struct DetailedMealView: View {
                             VStack {
                                 Divider()
                                 SubHeaderText(text: Constants.String.instTitleName)
+                                    .multilineTextAlignment(.center)
+                                    .padding()
                                 LabelText(text: meal.instructions.replacingOccurrences(of: "Pork", with: "Steak"))
                                     .multilineTextAlignment(.center)
                                     .fixedSize(horizontal: false, vertical: true)
@@ -97,14 +95,13 @@ struct DetailedMealView: View {
                         }
                     }
                 }
-                
-                .task {
-                    do {
-                        try await viewModel.fetchMeals(for: id)
-                    } catch {
-                        print("Error is here \(error)")
-                    }
-                }
+            }
+        }
+        .task {
+            do {
+                try await viewModel.fetchMeals(for: id)
+            } catch {
+                print("Error is here \(error)")
             }
         }
     }
@@ -136,9 +133,13 @@ struct InfoButton: View {
         Button(action: {
             ingredientsIsShowing = true
         }) {
-            Image(systemName: "info.circle")
-            ButtonText(text: Constants.String.tapForIng)
-                .multilineTextAlignment(.trailing)
+            HStack(spacing: nil){
+                LabelText(text: Constants.String.tapForIng)
+                    .multilineTextAlignment(.trailing)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                Image(systemName: "info.circle")
+            }
+            .padding(.horizontal, Constants.General.constraintsTopBottom)
         }
     }
 }

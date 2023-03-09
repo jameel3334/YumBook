@@ -17,6 +17,7 @@ struct ListRowView: View {
                 .cornerRadius(Constants.Image.menuTileCornerRadius)
                 .padding(.vertical, Constants.General.constraintsTopBottom)
             SubHeaderText(text: title)
+                .multilineTextAlignment(.leading)
                 .padding( Constants.General.constraintsTopBottom)
         }
     }
