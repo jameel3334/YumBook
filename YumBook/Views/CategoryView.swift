@@ -11,20 +11,24 @@ struct CategoryView: View {
     @StateObject var viewModel = CategoryViewModel()
     var body: some View {
         NavigationView {
-            List (viewModel.categories) { category in
-                NavigationLink(
-                    destination:
-                        MenuView(category: category.categoryTitle)
-                    ,label: {
-                        ListRowView(imageURL: category.image,
-                                    title: category.categoryTitle.replacingOccurrences(of: "Pork", with: "Steak"))
-                    }
-                )
-            }
-            .navigationBarTitle(Constants.String.categoriesTitleName)
-            .navigationBarTitleDisplayMode(.large)
-            .onAppear {
-                viewModel.fetchDessertMeals()
+            if viewModel.categories.isEmpty {
+                ProgressView()
+            } else {
+                List (viewModel.categories) { category in
+                    NavigationLink(
+                        destination:
+                            MenuView(category: category.categoryTitle)
+                        ,label: {
+                            ListRowView(imageURL: category.image,
+                                        title: category.categoryTitle.replacingOccurrences(of: "Pork", with: "Steak"))
+                        }
+                    )
+                }
+                .navigationBarTitle(Constants.String.categoriesTitleName)
+                .navigationBarTitleDisplayMode(.large)
+                .onAppear {
+                    viewModel.fetchDessertMeals()
+                }
             }
         }
     }

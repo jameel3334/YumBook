@@ -41,6 +41,9 @@ enum Constants {
         public static let menuTitleName = "Menu"
         public static let categoriesTitleName = "Categories"
         public static let favoritesTitleName = "Favorites"
+        public static let instTitleName = "Instructions"
+        public static let instAndMeasureTitleName = "Ingredients - Measurements"
+        public static let tapForIng = "Tap me for Ingredients"
     }
     enum Font {
         public static let comicText = "ComicNeue-Regular"

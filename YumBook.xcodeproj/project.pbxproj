@@ -42,6 +42,7 @@
 		19DF314B29BA54F300301B98 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF314A29BA54F300301B98 /* MockAPIService.swift */; };
 		19DF314D29BA551600301B98 /* MockProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF314C29BA551600301B98 /* MockProtocol.swift */; };
 		19DF314E29BA553600301B98 /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF314A29BA54F300301B98 /* MockAPIService.swift */; };
+		19DF315129BA974B00301B98 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF30FF29BA4AA300301B98 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -215,13 +216,13 @@
 		19DF311129BA4BCB00301B98 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				19DF311729BA4BE000301B98 /* CategoryView.swift */,
-				19DF311229BA4BDF00301B98 /* DetailedMealView.swift */,
-				19DF311829BA4BE000301B98 /* FavoriteView.swift */,
-				19DF311629BA4BDF00301B98 /* IngredientsView.swift */,
 				19DF311329BA4BDF00301B98 /* LaunchView.swift */,
-				19DF311529BA4BDF00301B98 /* MenuView.swift */,
 				19DF311429BA4BDF00301B98 /* TabViews.swift */,
+				19DF311729BA4BE000301B98 /* CategoryView.swift */,
+				19DF311529BA4BDF00301B98 /* MenuView.swift */,
+				19DF311229BA4BDF00301B98 /* DetailedMealView.swift */,
+				19DF311629BA4BDF00301B98 /* IngredientsView.swift */,
+				19DF311829BA4BE000301B98 /* FavoriteView.swift */,
 				19DF312029BA4BE800301B98 /* Templates */,
 			);
 			path = Views;
@@ -250,8 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				19DF312D29BA534E00301B98 /* NetworkUnitTests.swift */,
-				19DF314229BA540200301B98 /* Categories.json */,
 				19DF314429BA540B00301B98 /* FavoriteUnitTest.swift */,
+				19DF314229BA540200301B98 /* Categories.json */,
 				19DF314729BA549F00301B98 /* MockServer */,
 			);
 			path = YumBookTests;
@@ -407,6 +408,7 @@
 				19DF314929BA54DD00301B98 /* JSONMapper.swift in Sources */,
 				19DF314529BA540B00301B98 /* FavoriteUnitTest.swift in Sources */,
 				19DF314D29BA551600301B98 /* MockProtocol.swift in Sources */,
+				19DF315129BA974B00301B98 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

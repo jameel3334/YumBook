@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct IngredientsView: View {
-    @ObservedObject var viewModel = MealsViewModel()
     var ingredientsAndMeasures: [String]
     var body: some View {
         VStack(alignment: .center, spacing: 12) {
-            Text("Ingredients - Measurements")
-                .font(.headline)
-            List(ingredientsAndMeasures, id: \.self) { items in
-                Text(items)
+            SubHeaderText(text: Constants.String.instAndMeasureTitleName)
+            List(ingredientsAndMeasures, id: \.self) { item in
+                Text(item)
             }
         }
     }

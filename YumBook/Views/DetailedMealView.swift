@@ -11,10 +11,9 @@ struct DetailedMealView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @ObservedObject var viewModel = MealsViewModel()
-    @EnvironmentObject var favoriteModel: FavoriteViewModel
     @State private var isFavorite = false
     @State private var ingredientsIsShowing: Bool = false
-    let id: String
+    var id: String
     var body: some View {
         ZStack {
             Color(Constants.Color.accentColor).opacity(Constants.General.opacityBackground)
@@ -28,27 +27,22 @@ struct DetailedMealView: View {
                                 .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
                                 .cornerRadius(Constants.Image.menuTileCornerRadius)
                             Divider()
-                            HStack {
-                                SubHeaderText(text: meal.title)
-                                    .multilineTextAlignment(.trailing)
-                                    .fixedSize(horizontal: false, vertical: true)
-                                    .padding()
-                                Spacer()
-                                AddToFavorite(isFavorite: $isFavorite, meal: meal)
-                                    .padding()
-                            }
+                            SubHeaderText(text: meal.title.replacingOccurrences(of: "Pork", with: "Steak"))
+                                .multilineTextAlignment(.trailing)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .padding()
+                            Spacer()
+                            InfoButton(ingredientsIsShowing: $ingredientsIsShowing)
+                            Spacer()
                             Divider()
-                            LabelText(text: meal.instructions)
+                            SubHeaderText(text: Constants.String.instTitleName)
+                            LabelText(text: meal.instructions.replacingOccurrences(of: "Pork", with: "Steak"))
                                 .multilineTextAlignment(.center)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .padding()
                                 .toolbar {
                                     ToolbarItem(placement: .navigationBarTrailing) {
-                                        Button(action: {
-                                            ingredientsIsShowing = true
-                                        }) {
-                                            Image(systemName: "info.circle")
-                                        }
+                                        AddToFavorite(isFavorite: $isFavorite, meal: meal)
                                     }
                                 }
                         }
@@ -65,38 +59,36 @@ struct DetailedMealView: View {
                     }
                 }
             } else if (verticalSizeClass == .compact && (horizontalSizeClass == . regular || horizontalSizeClass == .compact)) {
-                ScrollView {
-                    ForEach(viewModel.meals, id: \.id) { meal in
-                        HStack {
+                ForEach(viewModel.meals, id: \.id) { meal in
+                    HStack {
+                        ScrollView {
                             VStack {
                                 DetailedImageView(imageURL: meal.image)
-                                    .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
+                                    .frame(width: Constants.Image.landscapeViewImageDimensions, height: Constants.Image.landscapeViewImageDimensions)
                                     .cornerRadius(Constants.Image.menuTileCornerRadius)
+                                    .scaledToFit()
                                 Divider()
-                                HStack {
-                                    SubHeaderText(text: meal.title)
-                                        .multilineTextAlignment(.trailing)
-                                        .fixedSize(horizontal: false, vertical: true)
-                                        .padding()
-                                    Spacer()
-                                    AddToFavorite(isFavorite: $isFavorite, meal: meal)
-                                        .padding()
-                                }
+                                SubHeaderText(text: meal.title.replacingOccurrences(of: "Pork", with: "Steak"))
+                                    .multilineTextAlignment(.trailing)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .padding()
+                                Spacer()
+                                InfoButton(ingredientsIsShowing: $ingredientsIsShowing)
+                                Spacer()
                             }
+                        }
+                        ScrollView {
                             VStack {
                                 Divider()
-                                LabelText(text: meal.instructions)
+                                SubHeaderText(text: Constants.String.instTitleName)
+                                LabelText(text: meal.instructions.replacingOccurrences(of: "Pork", with: "Steak"))
                                     .multilineTextAlignment(.center)
                                     .fixedSize(horizontal: false, vertical: true)
                                     .padding()
                             }
                             .toolbar {
                                 ToolbarItem(placement: .navigationBarTrailing) {
-                                    Button(action: {
-                                        ingredientsIsShowing = true
-                                    }) {
-                                        Image(systemName: "info.circle")
-                                    }
+                                    AddToFavorite(isFavorite: $isFavorite, meal: meal)
                                 }
                             }
                         }
@@ -105,6 +97,7 @@ struct DetailedMealView: View {
                         }
                     }
                 }
+                
                 .task {
                     do {
                         try await viewModel.fetchMeals(for: id)
@@ -118,24 +111,35 @@ struct DetailedMealView: View {
 }
 
 struct AddToFavorite: View {
-    @EnvironmentObject var viewmodel:FavoriteViewModel
+    @EnvironmentObject var viewModel:FavoriteViewModel
     @Binding var isFavorite: Bool
     var meal: Meal
     var body: some View {
         Button(action:  {
-            
             self.isFavorite.toggle()
-            
             if self.isFavorite {
-                self.viewmodel.add(addedItem: meal)
+                self.viewModel.add(addedItem: meal)
             } else {
-                self.viewmodel.undo(addedItem: meal)
+                self.viewModel.undo(addedItem: meal)
             }
         }) {
             Image(systemName: isFavorite ? "heart.fill" : "heart")
                 .foregroundColor(isFavorite ? .red : .gray)
         }
         .padding(.vertical, 10)
+    }
+}
+
+struct InfoButton: View {
+    @Binding var ingredientsIsShowing: Bool
+    var body: some View {
+        Button(action: {
+            ingredientsIsShowing = true
+        }) {
+            Image(systemName: "info.circle")
+            ButtonText(text: Constants.String.tapForIng)
+                .multilineTextAlignment(.trailing)
+        }
     }
 }
 

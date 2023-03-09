@@ -21,7 +21,7 @@ class MealsViewModel: ObservableObject {
         do {
             let data = try await service.fetchData(from: "\(Constants.URL.callMeal)\(id)", for: TotalMeal.self)
             Task { @MainActor in
-                    meals = data.meals
+                meals = data.meals
             }
         } catch {
             throw NetworkingError.invalidData

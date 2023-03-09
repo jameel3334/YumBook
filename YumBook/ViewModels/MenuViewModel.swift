@@ -31,7 +31,6 @@ class MenuViewModel: ObservableObject {
                 self?.meals = meals
             }
             .store(in: &cancellables)
-        
     }
 }
 

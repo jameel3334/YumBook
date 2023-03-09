@@ -8,25 +8,27 @@
 import SwiftUI
 
 struct MenuView: View {
-    @Environment(\.managedObjectContext) var viewContext
     @StateObject var viewModel = MenuViewModel()
     let category: String
     var body: some View {
-        List(viewModel.meals.sorted { $0.title < $1.title }, id: \.id) { meal in
-            NavigationLink(
-                destination:
-                    DetailedMealView(id: meal.id)
-                ,
-                label: {
-                    ListRowView(imageURL: meal.image, title: meal.title)
-                })
-        }
-        .navigationBarTitle(Constants.String.menuTitleName)
-        .accessibilityIdentifier("MenuTitle")
-        .navigationBarTitleDisplayMode(.large)
-        .navigationViewStyle(StackNavigationViewStyle())
-        .task {
-            viewModel.fetchMenus(for: category)
+        if viewModel.meals.isEmpty {
+            ProgressView()
+        } else {
+            List(viewModel.meals.sorted { $0.title < $1.title }, id: \.id) { meal in
+                NavigationLink(
+                    destination:
+                        DetailedMealView(id: meal.id)
+                    ,
+                    label: {
+                        ListRowView(imageURL: meal.image, title: meal.title.replacingOccurrences(of: "Pork", with: "Steak"))
+                    })
+            }
+            .navigationBarTitle(Constants.String.menuTitleName)
+            .navigationBarTitleDisplayMode(.large)
+            .navigationViewStyle(StackNavigationViewStyle())
+            .task {
+                viewModel.fetchMenus(for: category)
+            }
         }
     }
 }

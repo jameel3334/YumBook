@@ -14,7 +14,7 @@ struct TabViews: View {
             CategoryView()
                 .tabItem {
                     Image(systemName: "book")
-                    Text("Receipe Book")
+                    Text("Book")
                 }
                 .tag(0)
             FavoriteView()

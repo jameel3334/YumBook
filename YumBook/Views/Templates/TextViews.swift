@@ -13,7 +13,6 @@ struct TextViews: View {
             ScrollView {
                 ButtonText(text: "Hello!")
                 LabelText(text: "Hello!")
-                HeaderText(text: "Hello!")
                 SubHeaderText(text: "Hello!")
                 PriceText(text: "$ 22.0")
                 CustomHeaderText(text: "Hello!")
@@ -38,21 +37,10 @@ struct LabelText: View {
     var body: some View {
         
         Text(text)
-            .kerning(1)
+            .fontWeight(.regular)
+            .lineSpacing(20)
             .font(.body)
             .foregroundColor(Color(Constants.Color.textColor))
-            .minimumScaleFactor(1)
-    }
-}
-struct HeaderText: View {
-    var text: String
-    var body: some View {
-        
-        Text(text.uppercased())
-            .bold()
-            .foregroundColor(Color(Constants.Color.textColor))
-            .font(.largeTitle)
-            .multilineTextAlignment(.trailing)
     }
 }
 struct SubHeaderText: View {
@@ -62,8 +50,8 @@ struct SubHeaderText: View {
         Text(text.uppercased())
             .foregroundColor(Color(Constants.Color.textColor))
             .font(.headline)
+            .lineLimit(nil)
             .multilineTextAlignment(.leading)
-            .lineLimit(2)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
@@ -102,7 +90,7 @@ struct CustomHeaderText: View {
     var body: some View {
         
         StrokeText(text: text, width: 0.5, color: .black)
-            .font(.custom(Constants.Font.comicText, size: 32, relativeTo: .largeTitle))
+            .font(.custom(Constants.Font.comicText, size: 28, relativeTo: .title))
     }
 }
 struct TextViews_Previews: PreviewProvider {
