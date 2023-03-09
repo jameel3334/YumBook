@@ -24,6 +24,17 @@
 		19DF310E29BA4BA900301B98 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF310A29BA4BA900301B98 /* MealsViewModel.swift */; };
 		19DF310F29BA4BA900301B98 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF310B29BA4BA900301B98 /* MenuViewModel.swift */; };
 		19DF311029BA4BA900301B98 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF310C29BA4BA900301B98 /* CategoryViewModel.swift */; };
+		19DF311929BA4BE000301B98 /* DetailedMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF311229BA4BDF00301B98 /* DetailedMealView.swift */; };
+		19DF311A29BA4BE000301B98 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF311329BA4BDF00301B98 /* LaunchView.swift */; };
+		19DF311B29BA4BE000301B98 /* TabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF311429BA4BDF00301B98 /* TabViews.swift */; };
+		19DF311C29BA4BE000301B98 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF311529BA4BDF00301B98 /* MenuView.swift */; };
+		19DF311D29BA4BE000301B98 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF311629BA4BDF00301B98 /* IngredientsView.swift */; };
+		19DF311E29BA4BE000301B98 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF311729BA4BE000301B98 /* CategoryView.swift */; };
+		19DF311F29BA4BE000301B98 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF311829BA4BE000301B98 /* FavoriteView.swift */; };
+		19DF312329BA4BFA00301B98 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF312129BA4BFA00301B98 /* TextViews.swift */; };
+		19DF312429BA4BFA00301B98 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF312229BA4BFA00301B98 /* ListRowView.swift */; };
+		19DF312829BA4C1100301B98 /* ListRowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF312629BA4C1100301B98 /* ListRowImageView.swift */; };
+		19DF312929BA4C1100301B98 /* DetailedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF312729BA4C1100301B98 /* DetailedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +57,17 @@
 		19DF310A29BA4BA900301B98 /* MealsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
 		19DF310B29BA4BA900301B98 /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		19DF310C29BA4BA900301B98 /* CategoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		19DF311229BA4BDF00301B98 /* DetailedMealView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedMealView.swift; sourceTree = "<group>"; };
+		19DF311329BA4BDF00301B98 /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		19DF311429BA4BDF00301B98 /* TabViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViews.swift; sourceTree = "<group>"; };
+		19DF311529BA4BDF00301B98 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		19DF311629BA4BDF00301B98 /* IngredientsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
+		19DF311729BA4BE000301B98 /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		19DF311829BA4BE000301B98 /* FavoriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		19DF312129BA4BFA00301B98 /* TextViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		19DF312229BA4BFA00301B98 /* ListRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		19DF312629BA4C1100301B98 /* ListRowImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRowImageView.swift; sourceTree = "<group>"; };
+		19DF312729BA4C1100301B98 /* DetailedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +104,7 @@
 				19DF310729BA4B3D00301B98 /* Info.plist */,
 				19DF30EA29BA498700301B98 /* Models */,
 				19DF310829BA4B8500301B98 /* ViewModels */,
+				19DF311129BA4BCB00301B98 /* Views */,
 				19DF30DE29BA470000301B98 /* Preview Content */,
 			);
 			path = YumBook;
@@ -156,6 +179,40 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		19DF311129BA4BCB00301B98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19DF311729BA4BE000301B98 /* CategoryView.swift */,
+				19DF311229BA4BDF00301B98 /* DetailedMealView.swift */,
+				19DF311829BA4BE000301B98 /* FavoriteView.swift */,
+				19DF311629BA4BDF00301B98 /* IngredientsView.swift */,
+				19DF311329BA4BDF00301B98 /* LaunchView.swift */,
+				19DF311529BA4BDF00301B98 /* MenuView.swift */,
+				19DF311429BA4BDF00301B98 /* TabViews.swift */,
+				19DF312029BA4BE800301B98 /* Templates */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		19DF312029BA4BE800301B98 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				19DF312529BA4C0400301B98 /* Image */,
+				19DF312229BA4BFA00301B98 /* ListRowView.swift */,
+				19DF312129BA4BFA00301B98 /* TextViews.swift */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		19DF312529BA4C0400301B98 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				19DF312729BA4C1100301B98 /* DetailedImageView.swift */,
+				19DF312629BA4C1100301B98 /* ListRowImageView.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,18 +284,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19DF312429BA4BFA00301B98 /* ListRowView.swift in Sources */,
 				19DF311029BA4BA900301B98 /* CategoryViewModel.swift in Sources */,
+				19DF312329BA4BFA00301B98 /* TextViews.swift in Sources */,
+				19DF311A29BA4BE000301B98 /* LaunchView.swift in Sources */,
 				19DF30F329BA4A2100301B98 /* MealModel.swift in Sources */,
 				19DF30D929BA46FE00301B98 /* YumBookApp.swift in Sources */,
 				19DF310229BA4AD100301B98 /* APIService.swift in Sources */,
 				19DF310629BA4AFE00301B98 /* NetworkManager.swift in Sources */,
 				19DF30F529BA4A2900301B98 /* MenuModel.swift in Sources */,
+				19DF311B29BA4BE000301B98 /* TabViews.swift in Sources */,
 				19DF310E29BA4BA900301B98 /* MealsViewModel.swift in Sources */,
 				19DF30F129BA4A1200301B98 /* CategoryModel.swift in Sources */,
+				19DF311D29BA4BE000301B98 /* IngredientsView.swift in Sources */,
 				19DF310429BA4AE900301B98 /* APIServiceProtocol.swift in Sources */,
+				19DF312929BA4C1100301B98 /* DetailedImageView.swift in Sources */,
 				19DF30EC29BA49A700301B98 /* CacheAsyncImage.swift in Sources */,
 				19DF30EE29BA49E400301B98 /* Constants.swift in Sources */,
+				19DF311E29BA4BE000301B98 /* CategoryView.swift in Sources */,
+				19DF311C29BA4BE000301B98 /* MenuView.swift in Sources */,
+				19DF311F29BA4BE000301B98 /* FavoriteView.swift in Sources */,
+				19DF312829BA4C1100301B98 /* ListRowImageView.swift in Sources */,
 				19DF310F29BA4BA900301B98 /* MenuViewModel.swift in Sources */,
+				19DF311929BA4BE000301B98 /* DetailedMealView.swift in Sources */,
 				19DF310029BA4AA300301B98 /* APIError.swift in Sources */,
 				19DF310D29BA4BA900301B98 /* FavoriteViewModel.swift in Sources */,
 			);
