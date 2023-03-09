@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		19DF30D929BA46FE00301B98 /* YumBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF30D829BA46FE00301B98 /* YumBookApp.swift */; };
-		19DF30DB29BA46FE00301B98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF30DA29BA46FE00301B98 /* ContentView.swift */; };
 		19DF30DD29BA470000301B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DF30DC29BA470000301B98 /* Assets.xcassets */; };
 		19DF30E029BA470000301B98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DF30DF29BA470000301B98 /* Preview Assets.xcassets */; };
+		19DF30E929BA483F00301B98 /* ComicNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19DF30E829BA483F00301B98 /* ComicNeue-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19DF30D529BA46FE00301B98 /* YumBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YumBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DF30D829BA46FE00301B98 /* YumBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumBookApp.swift; sourceTree = "<group>"; };
-		19DF30DA29BA46FE00301B98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19DF30DC29BA470000301B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19DF30DF29BA470000301B98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19DF30E829BA483F00301B98 /* ComicNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +51,7 @@
 		19DF30D729BA46FE00301B98 /* YumBook */ = {
 			isa = PBXGroup;
 			children = (
-				19DF30D829BA46FE00301B98 /* YumBookApp.swift */,
-				19DF30DA29BA46FE00301B98 /* ContentView.swift */,
-				19DF30DC29BA470000301B98 /* Assets.xcassets */,
+				19DF30E629BA47F300301B98 /* App */,
 				19DF30DE29BA470000301B98 /* Preview Content */,
 			);
 			path = YumBook;
@@ -65,6 +63,24 @@
 				19DF30DF29BA470000301B98 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		19DF30E629BA47F300301B98 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				19DF30D829BA46FE00301B98 /* YumBookApp.swift */,
+				19DF30DC29BA470000301B98 /* Assets.xcassets */,
+				19DF30E729BA480700301B98 /* Font */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		19DF30E729BA480700301B98 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				19DF30E829BA483F00301B98 /* ComicNeue-Regular.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +143,7 @@
 			files = (
 				19DF30E029BA470000301B98 /* Preview Assets.xcassets in Resources */,
 				19DF30DD29BA470000301B98 /* Assets.xcassets in Resources */,
+				19DF30E929BA483F00301B98 /* ComicNeue-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +154,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19DF30DB29BA46FE00301B98 /* ContentView.swift in Sources */,
 				19DF30D929BA46FE00301B98 /* YumBookApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

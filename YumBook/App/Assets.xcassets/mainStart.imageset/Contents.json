@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Black_Yellow_and_White__Dessert_Maker_Brand_Cute_and_Illustrated_Logo-removebg-preview.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
