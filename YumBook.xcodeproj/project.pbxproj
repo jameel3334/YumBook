@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1963CAC52A030B2700BA7BF9 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CAC42A030B2700BA7BF9 /* AddRecipeView.swift */; };
+		1963CAD82A04450800BA7BF9 /* Recipe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1963CAD62A04450800BA7BF9 /* Recipe.xcdatamodeld */; };
+		1963CADA2A04463300BA7BF9 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CAD92A04463300BA7BF9 /* Recipe+CoreDataProperties.swift */; };
+		1963CADC2A0446A800BA7BF9 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CADB2A0446A800BA7BF9 /* Recipe+CoreDataClass.swift */; };
+		1963CADE2A04472900BA7BF9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CADD2A04472900BA7BF9 /* Persistence.swift */; };
 		19DF30D929BA46FE00301B98 /* YumBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF30D829BA46FE00301B98 /* YumBookApp.swift */; };
 		19DF30DD29BA470000301B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DF30DC29BA470000301B98 /* Assets.xcassets */; };
 		19DF30E029BA470000301B98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DF30DF29BA470000301B98 /* Preview Assets.xcassets */; };
@@ -56,6 +61,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1963CAC42A030B2700BA7BF9 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
+		1963CAD72A04450800BA7BF9 /* Recipe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipe.xcdatamodel; sourceTree = "<group>"; };
+		1963CAD92A04463300BA7BF9 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1963CADB2A0446A800BA7BF9 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1963CADD2A04472900BA7BF9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		19DF30D529BA46FE00301B98 /* YumBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YumBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DF30D829BA46FE00301B98 /* YumBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumBookApp.swift; sourceTree = "<group>"; };
 		19DF30DC29BA470000301B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +123,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1963CAD52A0444E600BA7BF9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1963CAD62A04450800BA7BF9 /* Recipe.xcdatamodeld */,
+				1963CAD92A04463300BA7BF9 /* Recipe+CoreDataProperties.swift */,
+				1963CADB2A0446A800BA7BF9 /* Recipe+CoreDataClass.swift */,
+				1963CADD2A04472900BA7BF9 /* Persistence.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		19DF30CC29BA46FE00301B98 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +194,7 @@
 		19DF30EA29BA498700301B98 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1963CAD52A0444E600BA7BF9 /* CoreData */,
 				19DF30EB29BA49A700301B98 /* CacheAsyncImage.swift */,
 				19DF30ED29BA49E400301B98 /* Constants.swift */,
 				19DF30F629BA4A5C00301B98 /* Networking */,
@@ -221,6 +243,7 @@
 				19DF311729BA4BE000301B98 /* CategoryView.swift */,
 				19DF311529BA4BDF00301B98 /* MenuView.swift */,
 				19DF311229BA4BDF00301B98 /* DetailedMealView.swift */,
+				1963CAC42A030B2700BA7BF9 /* AddRecipeView.swift */,
 				19DF311629BA4BDF00301B98 /* IngredientsView.swift */,
 				19DF311829BA4BE000301B98 /* FavoriteView.swift */,
 				19DF312029BA4BE800301B98 /* Templates */,
@@ -373,10 +396,13 @@
 				19DF312429BA4BFA00301B98 /* ListRowView.swift in Sources */,
 				19DF311029BA4BA900301B98 /* CategoryViewModel.swift in Sources */,
 				19DF312329BA4BFA00301B98 /* TextViews.swift in Sources */,
+				1963CAD82A04450800BA7BF9 /* Recipe.xcdatamodeld in Sources */,
 				19DF311A29BA4BE000301B98 /* LaunchView.swift in Sources */,
+				1963CADC2A0446A800BA7BF9 /* Recipe+CoreDataClass.swift in Sources */,
 				19DF30F329BA4A2100301B98 /* MealModel.swift in Sources */,
 				19DF30D929BA46FE00301B98 /* YumBookApp.swift in Sources */,
 				19DF310229BA4AD100301B98 /* APIService.swift in Sources */,
+				1963CADA2A04463300BA7BF9 /* Recipe+CoreDataProperties.swift in Sources */,
 				19DF310629BA4AFE00301B98 /* NetworkManager.swift in Sources */,
 				19DF30F529BA4A2900301B98 /* MenuModel.swift in Sources */,
 				19DF311B29BA4BE000301B98 /* TabViews.swift in Sources */,
@@ -396,6 +422,8 @@
 				19DF311929BA4BE000301B98 /* DetailedMealView.swift in Sources */,
 				19DF310029BA4AA300301B98 /* APIError.swift in Sources */,
 				19DF310D29BA4BA900301B98 /* FavoriteViewModel.swift in Sources */,
+				1963CAC52A030B2700BA7BF9 /* AddRecipeView.swift in Sources */,
+				1963CADE2A04472900BA7BF9 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +692,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1963CAD62A04450800BA7BF9 /* Recipe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1963CAD72A04450800BA7BF9 /* Recipe.xcdatamodel */,
+			);
+			currentVersion = 1963CAD72A04450800BA7BF9 /* Recipe.xcdatamodel */;
+			path = Recipe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 19DF30CD29BA46FE00301B98 /* Project object */;
 }

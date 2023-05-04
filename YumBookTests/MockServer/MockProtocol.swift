@@ -34,3 +34,13 @@ class MockURLSessionProtocol: URLProtocol {
     override func stopLoading() {
     }
 }
+
+protocol SomeProtocol {
+    func haveProtocol(for any: String) 
+}
+
+class TestProtocol: SomeProtocol {
+    func haveProtocol(for any: String) {
+        return
+    }
+}
