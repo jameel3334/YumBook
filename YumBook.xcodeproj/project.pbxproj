@@ -12,6 +12,7 @@
 		1963CADA2A04463300BA7BF9 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CAD92A04463300BA7BF9 /* Recipe+CoreDataProperties.swift */; };
 		1963CADC2A0446A800BA7BF9 /* Recipe+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CADB2A0446A800BA7BF9 /* Recipe+CoreDataClass.swift */; };
 		1963CADE2A04472900BA7BF9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CADD2A04472900BA7BF9 /* Persistence.swift */; };
+		1963CAE02A0452D100BA7BF9 /* MyRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CADF2A0452D100BA7BF9 /* MyRecipeView.swift */; };
 		19DF30D929BA46FE00301B98 /* YumBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF30D829BA46FE00301B98 /* YumBookApp.swift */; };
 		19DF30DD29BA470000301B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DF30DC29BA470000301B98 /* Assets.xcassets */; };
 		19DF30E029BA470000301B98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DF30DF29BA470000301B98 /* Preview Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		1963CAD92A04463300BA7BF9 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1963CADB2A0446A800BA7BF9 /* Recipe+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1963CADD2A04472900BA7BF9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		1963CADF2A0452D100BA7BF9 /* MyRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipeView.swift; sourceTree = "<group>"; };
 		19DF30D529BA46FE00301B98 /* YumBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YumBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DF30D829BA46FE00301B98 /* YumBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumBookApp.swift; sourceTree = "<group>"; };
 		19DF30DC29BA470000301B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				19DF311529BA4BDF00301B98 /* MenuView.swift */,
 				19DF311229BA4BDF00301B98 /* DetailedMealView.swift */,
 				1963CAC42A030B2700BA7BF9 /* AddRecipeView.swift */,
+				1963CADF2A0452D100BA7BF9 /* MyRecipeView.swift */,
 				19DF311629BA4BDF00301B98 /* IngredientsView.swift */,
 				19DF311829BA4BE000301B98 /* FavoriteView.swift */,
 				19DF312029BA4BE800301B98 /* Templates */,
@@ -399,6 +402,7 @@
 				1963CAD82A04450800BA7BF9 /* Recipe.xcdatamodeld in Sources */,
 				19DF311A29BA4BE000301B98 /* LaunchView.swift in Sources */,
 				1963CADC2A0446A800BA7BF9 /* Recipe+CoreDataClass.swift in Sources */,
+				1963CAE02A0452D100BA7BF9 /* MyRecipeView.swift in Sources */,
 				19DF30F329BA4A2100301B98 /* MealModel.swift in Sources */,
 				19DF30D929BA46FE00301B98 /* YumBookApp.swift in Sources */,
 				19DF310229BA4AD100301B98 /* APIService.swift in Sources */,

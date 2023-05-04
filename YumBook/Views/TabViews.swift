@@ -13,16 +13,22 @@ struct TabViews: View {
         TabView {
             CategoryView()
                 .tabItem {
-                    Image(systemName: "book")
+                    Image(systemName: "book.closed")
                     Text("Book")
                 }
                 .tag(0)
+            MyRecipeView()
+                .tabItem {
+                    Image(systemName: "book")
+                    Text("My Book")
+                }
+                .tag(1)
             FavoriteView()
                 .tabItem {
                     Image(systemName: "heart")
                     Text("Favorite")
                 }
-                .tag(1)
+                .tag(2)
                 .badge(viewModel.addedItems.count)
         }
     }

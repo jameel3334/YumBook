@@ -13,6 +13,7 @@ struct AddRecipeView: View {
     @State private var instructions = ""
     @State private var categories = ""
     @Environment(\.managedObjectContext) var viewContext
+    @Binding var addRecipeIsShowing: Bool
     var body: some View {
         NavigationView {
             Form {
@@ -22,15 +23,14 @@ struct AddRecipeView: View {
                     TextField("instructions", text: $instructions)
                     
                 }
-                
                 Section(header: Text("Categories")) {
                     TextField("Enter categories separated by commas", text: $categories)
                 }
-                
                 Section {
                     if !self.recipeName.isEmpty {
                         Button(action:  {
                             Recipe.create(title: self.recipeName, instruction: self.instructions, ingredientAndMeasure: self.ingredients, in: self.viewContext)
+                        addRecipeIsShowing = false
                         }) {
                             Text("Save Recipe")
                         }
@@ -42,9 +42,4 @@ struct AddRecipeView: View {
     }
 }
 
-struct AddRecipeView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddRecipeView()
-    }
-}
 

@@ -40,6 +40,7 @@ enum Constants {
     enum String {
         public static let menuTitleName = "Menu"
         public static let categoriesTitleName = "Categories"
+        public static let recipeTitleName = "My Recipes"
         public static let favoritesTitleName = "Favorites"
         public static let instTitleName = "Instructions"
         public static let instAndMeasureTitleName = "Ingredients - Measurements"
