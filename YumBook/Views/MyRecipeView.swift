@@ -13,12 +13,12 @@ struct MyRecipeView: View {
     @State private var addRecipeIsShowing: Bool = false
     var body: some View {
             NavigationView {
-                List (recipeList, id: \.self) { recipeList in
+                List (recipeList, id: \.self) { recipe in
                     NavigationLink(
-                        destination: Text("TBC")
+                        destination: MyRecipeDetailedView(recipe: recipe)
                         ,label: {
                             ListRowView(imageURL: Constants.Image.defaultMenuImage,
-                                        title: recipeList.title)
+                                        title: recipe.title)
                         }
                     )
                 }
