@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		194E763D2A12E73200C98E18 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E763C2A12E73200C98E18 /* NetworkMonitor.swift */; };
 		1963CAC52A030B2700BA7BF9 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CAC42A030B2700BA7BF9 /* AddRecipeView.swift */; };
 		1963CAD82A04450800BA7BF9 /* Recipe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1963CAD62A04450800BA7BF9 /* Recipe.xcdatamodeld */; };
 		1963CADA2A04463300BA7BF9 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CAD92A04463300BA7BF9 /* Recipe+CoreDataProperties.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		194E763C2A12E73200C98E18 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		1963CAC42A030B2700BA7BF9 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
 		1963CAD72A04450800BA7BF9 /* Recipe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipe.xcdatamodel; sourceTree = "<group>"; };
 		1963CAD92A04463300BA7BF9 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				19DF310129BA4AD100301B98 /* APIService.swift */,
 				19DF310329BA4AE900301B98 /* APIServiceProtocol.swift */,
 				19DF310529BA4AFD00301B98 /* NetworkManager.swift */,
+				194E763C2A12E73200C98E18 /* NetworkMonitor.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				19DF312929BA4C1100301B98 /* DetailedImageView.swift in Sources */,
 				19DF30EC29BA49A700301B98 /* CacheAsyncImage.swift in Sources */,
 				19DF30EE29BA49E400301B98 /* Constants.swift in Sources */,
+				194E763D2A12E73200C98E18 /* NetworkMonitor.swift in Sources */,
 				19DF311E29BA4BE000301B98 /* CategoryView.swift in Sources */,
 				19DF311C29BA4BE000301B98 /* MenuView.swift in Sources */,
 				19DF311F29BA4BE000301B98 /* FavoriteView.swift in Sources */,

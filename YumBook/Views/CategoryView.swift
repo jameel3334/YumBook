@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CategoryView: View {
     @StateObject var viewModel = CategoryViewModel()
+    @EnvironmentObject private var networkState: NetworkMonitor
     var body: some View {
         NavigationView {
             List (viewModel.categories) { category in
@@ -23,6 +24,11 @@ struct CategoryView: View {
             }
             .navigationBarTitle(Constants.String.categoriesTitleName)
             .navigationBarTitleDisplayMode(.large)
+            .alert(isPresented: $networkState.isNotActive) {
+                Alert(title: Text("No internet connection"), message:
+                        Text("Please check your network connection")
+                      , dismissButton: .default(Text("OK")))
+            }
             .onAppear {
                 viewModel.fetchDessertMeals()
             }
