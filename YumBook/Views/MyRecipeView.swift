@@ -20,6 +20,7 @@ struct MyRecipeView: View {
                     ,label: {
                         if let image = selectedImage {
                             Image(uiImage: image)
+                                .resizable()
                                 .frame(width: Constants.Image.menuTileHeightWidth, height: Constants.Image.menuTileHeightWidth)
                                 .cornerRadius(Constants.Image.menuTileCornerRadius)
                                 .padding(.vertical, Constants.General.constraintsTopBottom)
@@ -45,7 +46,7 @@ struct MyRecipeView: View {
         }.sheet(isPresented: $addRecipeIsShowing) {
             AddRecipeView(addRecipeIsShowing: $addRecipeIsShowing)
         }
-        .onAppear {
+        .task {
             if let recipe = recipeList.first, let image = recipe.image {
                 selectedImage = UIImage(data: image)
             }

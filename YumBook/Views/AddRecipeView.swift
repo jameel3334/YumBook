@@ -29,9 +29,6 @@ struct AddRecipeView: View {
                     TextField("instructions", text: $instructions)
                     
                 }
-                Section(header: Text("Categories")) {
-                    TextField("Enter categories separated by commas", text: $categories)
-                }
                 Section(header: Text("Image")) {
                              Button(action: {
                                  isShowingImagePicker = true

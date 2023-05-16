@@ -29,6 +29,7 @@ struct MyRecipeDetailedView: View {
                 VStack {
                     if let image = selectedImage {
                         Image(uiImage: image)
+                            .resizable()
                             .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
                             .cornerRadius(Constants.Image.menuTileCornerRadius)
                     } else {
