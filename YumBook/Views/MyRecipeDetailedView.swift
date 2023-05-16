@@ -13,6 +13,7 @@ struct MyRecipeDetailedView: View {
     let instructions: String?
     let ingredientAndMeasure: String?
     @State private var ingredientsIsShowing: Bool = false
+    @State private var selectedImage: UIImage?
     
     init(recipe: Recipe) {
         self.recipe = recipe
@@ -26,9 +27,15 @@ struct MyRecipeDetailedView: View {
                 .ignoresSafeArea()
             ScrollView {
                 VStack {
-                    DetailedImageView(imageURL: Constants.Image.defaultMenuImage)
-                        .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
-                        .cornerRadius(Constants.Image.menuTileCornerRadius)
+                    if let image = selectedImage {
+                        Image(uiImage: image)
+                            .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
+                            .cornerRadius(Constants.Image.menuTileCornerRadius)
+                    } else {
+                        DetailedImageView(imageURL: Constants.Image.defaultMenuImage)
+                            .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
+                            .cornerRadius(Constants.Image.menuTileCornerRadius)
+                    }
                     Divider()
                     SubHeaderText(text: title ?? "No Title")
                         .multilineTextAlignment(.trailing)
@@ -53,6 +60,11 @@ struct MyRecipeDetailedView: View {
                             .frame(maxWidth: .infinity, alignment: .center)
                             .padding()
                         Text(ingredientAndMeasure ?? "No Ingredients Found")
+                    }
+                }
+                .onAppear {
+                    if let image = recipe.image {
+                        selectedImage = UIImage(data: image) // Assign the image data to selectedImage
                     }
                 }
             }

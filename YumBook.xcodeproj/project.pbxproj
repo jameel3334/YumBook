@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		194E763D2A12E73200C98E18 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E763C2A12E73200C98E18 /* NetworkMonitor.swift */; };
 		194E763F2A12E7CD00C98E18 /* MyRecipeDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E763E2A12E7CD00C98E18 /* MyRecipeDetailedView.swift */; };
+		194E76412A13030600C98E18 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E76402A13030600C98E18 /* ImagePicker.swift */; };
 		1963CAC52A030B2700BA7BF9 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CAC42A030B2700BA7BF9 /* AddRecipeView.swift */; };
 		1963CAD82A04450800BA7BF9 /* Recipe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1963CAD62A04450800BA7BF9 /* Recipe.xcdatamodeld */; };
 		1963CADA2A04463300BA7BF9 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1963CAD92A04463300BA7BF9 /* Recipe+CoreDataProperties.swift */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		194E763C2A12E73200C98E18 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		194E763E2A12E7CD00C98E18 /* MyRecipeDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipeDetailedView.swift; sourceTree = "<group>"; };
+		194E76402A13030600C98E18 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1963CAC42A030B2700BA7BF9 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
 		1963CAD72A04450800BA7BF9 /* Recipe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Recipe.xcdatamodel; sourceTree = "<group>"; };
 		1963CAD92A04463300BA7BF9 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				19DF311529BA4BDF00301B98 /* MenuView.swift */,
 				19DF311229BA4BDF00301B98 /* DetailedMealView.swift */,
 				1963CAC42A030B2700BA7BF9 /* AddRecipeView.swift */,
+				194E76402A13030600C98E18 /* ImagePicker.swift */,
 				1963CADF2A0452D100BA7BF9 /* MyRecipeView.swift */,
 				194E763E2A12E7CD00C98E18 /* MyRecipeDetailedView.swift */,
 				19DF311629BA4BDF00301B98 /* IngredientsView.swift */,
@@ -419,6 +422,7 @@
 				19DF311B29BA4BE000301B98 /* TabViews.swift in Sources */,
 				19DF310E29BA4BA900301B98 /* MealsViewModel.swift in Sources */,
 				19DF30F129BA4A1200301B98 /* CategoryModel.swift in Sources */,
+				194E76412A13030600C98E18 /* ImagePicker.swift in Sources */,
 				19DF314E29BA553600301B98 /* MockAPIService.swift in Sources */,
 				19DF311D29BA4BE000301B98 /* IngredientsView.swift in Sources */,
 				19DF310429BA4AE900301B98 /* APIServiceProtocol.swift in Sources */,
