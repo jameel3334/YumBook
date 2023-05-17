@@ -10,14 +10,14 @@ import CoreData
 
 
 extension Recipe {
-    @NSManaged public var ingredientAndMeasure: String
+    @NSManaged public var ingredientAndMeasure: [String]
     @NSManaged public var title: String
-    @NSManaged public var instruction: String
+    @NSManaged public var instruction: [String]
     @NSManaged public var image: Data?
     
   static func create(title: String,
-                     instruction: String,
-                     ingredientAndMeasure: String,
+                     instruction: [String],
+                     ingredientAndMeasure: [String],
                      image: UIImage?,
                      in managedObjectContext: NSManagedObjectContext) {
     let newRecipe = self.init(context: managedObjectContext)

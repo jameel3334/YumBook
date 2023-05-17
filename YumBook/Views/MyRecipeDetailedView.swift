@@ -10,8 +10,8 @@ import SwiftUI
 struct MyRecipeDetailedView: View {
     let recipe: Recipe
     let title: String?
-    let instructions: String?
-    let ingredientAndMeasure: String?
+    let instructions: [String]?
+    let ingredientAndMeasure: [String]?
     @State private var ingredientsIsShowing: Bool = false
     @State private var selectedImage: UIImage?
     
@@ -49,24 +49,25 @@ struct MyRecipeDetailedView: View {
                     SubHeaderText(text: Constants.String.instTitleName)
                         .multilineTextAlignment(.center)
                         .padding()
-                    LabelText(text: instructions ?? "No Instructions")
+                    LabelText(text: instructions?.joined(separator: "\n") ?? "No Instructions")
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding()
-                }
-                .sheet(isPresented: $ingredientsIsShowing) {
-                    VStack {
-                        SubHeaderText(text: Constants.String.instAndMeasureTitleName)
-                            .multilineTextAlignment(.center)
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .padding()
-                        Text(ingredientAndMeasure ?? "No Ingredients Found")
-                    }
-                }
-                .onAppear {
-                    if let image = recipe.image {
-                        selectedImage = UIImage(data: image) // Assign the image data to selectedImage
-                    }
+                    
+                        .sheet(isPresented: $ingredientsIsShowing) {
+                            VStack {
+                                SubHeaderText(text: "Ingredients")
+                                    .multilineTextAlignment(.center)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .padding()
+                                Text(ingredientAndMeasure?.joined(separator: "\n") ?? "No Ingredients Found")
+                            }
+                        }
+                        .task { @MainActor in
+                            if let image = recipe.image {
+                                selectedImage = UIImage(data: image)
+                            }
+                        }
                 }
             }
         }
