@@ -47,7 +47,6 @@ struct AddRecipeView: View {
                             }
                             .onDelete(perform: deleteIngredient)
                         }
-                        .frame(height: 40)
                         .background(Color(UIColor.secondarySystemBackground))
                         .cornerRadius(8)
 
@@ -71,7 +70,6 @@ struct AddRecipeView: View {
                         }
                         .onDelete(perform: deleteInstructions)
                     }
-                    .frame(height: 40)
                     .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(8)
                 }

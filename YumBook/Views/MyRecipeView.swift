@@ -46,7 +46,7 @@ struct MyRecipeView: View {
         }.sheet(isPresented: $addRecipeIsShowing) {
             AddRecipeView(addRecipeIsShowing: $addRecipeIsShowing)
         }
-        .task {
+        .task { @MainActor in
             if let recipe = recipeList.first, let image = recipe.image {
                 selectedImage = UIImage(data: image)
             }
