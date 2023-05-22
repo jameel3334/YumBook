@@ -16,7 +16,7 @@ struct IngredientsView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding()
             List(ingredientsAndMeasures, id: \.self) { item in
-                Text(item)
+                Text(item.replacingOccurrences(of: "\\bPork\\b", with: "Steak", options: .regularExpression))
             }
         }
     }

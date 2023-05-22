@@ -18,6 +18,9 @@ class CategoryViewModel: ObservableObject {
             .map(\.data)
             .decode(type: TotalCategory.self, decoder: JSONDecoder())
             .map(\.categories)
+            .map { categories in
+                         categories.filter { !$0.categoryTitle.lowercased().contains("pork") }
+                     }
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {

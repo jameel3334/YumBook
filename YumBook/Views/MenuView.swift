@@ -17,7 +17,7 @@ struct MenuView: View {
                     DetailedMealView(id: meal.id)
                 ,
                 label: {
-                    ListRowView(imageURL: meal.image, title: meal.title.replacingOccurrences(of: "Pork", with: "Steak"))
+                    ListRowView(imageURL: meal.image, title: meal.title.replacingOccurrences(of: "\\bPork\\b", with: "Steak", options: .regularExpression))
                 })
         }
         .navigationBarTitle(Constants.String.menuTitleName)

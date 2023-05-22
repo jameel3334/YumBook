@@ -27,7 +27,7 @@ struct DetailedMealView: View {
                                 .frame(width: Constants.Image.portraitViewImageDimensions, height: Constants.Image.portraitViewImageDimensions)
                                 .cornerRadius(Constants.Image.menuTileCornerRadius)
                             Divider()
-                            SubHeaderText(text: meal.title.replacingOccurrences(of: "Pork", with: "Steak"))
+                            SubHeaderText(text: meal.title.replacingOccurrences(of: "\\bPork\\b", with: "Steak", options: .regularExpression))
                                 .multilineTextAlignment(.trailing)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .padding()
@@ -38,7 +38,7 @@ struct DetailedMealView: View {
                             SubHeaderText(text: Constants.String.instTitleName)
                                 .multilineTextAlignment(.center)
                                 .padding()
-                            LabelText(text: meal.instructions.replacingOccurrences(of: "Pork", with: "Steak"))
+                            LabelText(text: meal.instructions.replacingOccurrences(of: "\\bPork\\b", with: "Steak", options: .regularExpression))
                                 .multilineTextAlignment(.center)
                                 .fixedSize(horizontal: false, vertical: true)
                                 .padding()
@@ -49,7 +49,10 @@ struct DetailedMealView: View {
                                 }
                         }
                         .sheet(isPresented: $ingredientsIsShowing) {
-                            IngredientsView(ingredientsAndMeasures: meal.ingredientsAndMeasures)
+                            IngredientsView(ingredientsAndMeasures: meal.ingredientsAndMeasures.map { $0.replacingOccurrences(of: "\\bPork\\b",
+                                                                                                                              with: "Steak",
+                                                                                                                              options: .regularExpression)
+                            })
                         }
                     }
                 }
@@ -64,7 +67,7 @@ struct DetailedMealView: View {
                                     .frame(width: Constants.Image.landscapeViewImageDimensions, height: Constants.Image.landscapeViewImageDimensions)
                                     .cornerRadius(Constants.Image.menuTileCornerRadius)
                                 Divider()
-                                SubHeaderText(text: meal.title.replacingOccurrences(of: "Pork", with: "Steak"))
+                                SubHeaderText(text: meal.title.replacingOccurrences(of: "\\bPork\\b", with: "Steak", options: .regularExpression))
                                     .multilineTextAlignment(.leading)
                                     .fixedSize(horizontal: false, vertical: true)
                                     .padding()
@@ -79,7 +82,7 @@ struct DetailedMealView: View {
                                 SubHeaderText(text: Constants.String.instTitleName)
                                     .multilineTextAlignment(.center)
                                     .padding()
-                                LabelText(text: meal.instructions.replacingOccurrences(of: "Pork", with: "Steak"))
+                                LabelText(text: meal.instructions.replacingOccurrences(of: "\\bPork\\b", with: "Steak", options: .regularExpression))
                                     .multilineTextAlignment(.center)
                                     .fixedSize(horizontal: false, vertical: true)
                                     .padding()
@@ -91,7 +94,9 @@ struct DetailedMealView: View {
                             }
                         }
                         .sheet(isPresented: $ingredientsIsShowing) {
-                            IngredientsView(ingredientsAndMeasures: meal.ingredientsAndMeasures)
+                            IngredientsView(ingredientsAndMeasures: meal.ingredientsAndMeasures.map { $0.replacingOccurrences(of: "\\bPork\\b",
+                                                                                                                              with: "Steak",
+                                                                                                                              options: .regularExpression)})
                         }
                     }
                 }
